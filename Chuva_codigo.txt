@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+
+<head> <title>CHUVA </title> 
+
+<!-- ajuste do cabeçalho-->
+<style> 
+
+div {background-color: #009ade; color: white; font-style: bold; font-size: xx-large; height: 50px; width: 590px;  } 
+
+</style>
+
+<!-- mostrar o dia da semana-->
+<div id="hoje" align="center">
+
+<script>
+var semana = ["Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"];
+var d = new Date();
+document.getElementById("hoje").innerHTML = semana[d.getDay()];
+</script> 
+
+</div>
+<!-- mostrar o dia do mês-->
+
+<div id="hoje_numero" align="center">
+
+<script>
+var numero = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"];
+var dn = new Date();
+document.getElementById("hoje_numero").innerHTML = numero[dn.getDate()];
+
+
+</script> 
+</div>
+
+</head>
+
+<body onload="diasemana()" >
+
+<meta charset="utf-8">
+
+<!-- imagens mudando de cor ao passar o mouse-->
+<img id="imgColorida" src="programacao_24h.png" alt="progamacao">
+<img id="imgdesenho" src="programacao_agora.png" alt="desenho" >
+
+<style >
+
+#imgColorida{
+    -webkit-filter: grayscale(100%); 
+}
+ 
+#imgColorida:hover{
+    -webkit-filter: grayscale(0);
+}
+
+</style>
+
+<style >
+#imgdesenho {
+    -webkit-filter: grayscale(0%); 
+}
+
+#imgdesenho:hover {
+    -webkit-filter: grayscale(100%);
+}
+</style>
+
+
+</script>
+
+</body>
+
+</html>
